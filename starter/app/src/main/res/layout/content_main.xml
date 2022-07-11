@@ -9,14 +9,70 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ImageView
+        android:id="@+id/img_cloud_download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_view_height"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/round_cloud_download_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rd_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_cloud_download">
+
+        <RadioButton
+            android:id="@+id/rb_glide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layou_margin_start"
+            android:layout_marginEnd="@dimen/layout_margin_end"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:text="@string/glide_string"
+            android:textSize="@dimen/default_text_size" />
+
+        <RadioButton
+            android:id="@+id/rb_load_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layou_margin_start"
+            android:layout_marginEnd="@dimen/layout_margin_end"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:text="@string/load_app_string"
+            android:textSize="@dimen/default_text_size" />
+
+        <RadioButton
+            android:id="@+id/rb_retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layou_margin_start"
+            android:layout_marginEnd="@dimen/layout_margin_end"
+            android:layout_marginBottom="@dimen/layout_margin_bottom"
+            android:text="@string/retrofit_string"
+            android:textSize="@dimen/default_text_size" />
+
+    </RadioGroup>
+
+
     <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
+        android:layout_height="@dimen/layout_height"
+        android:layout_margin="@dimen/layout_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:loadingStateColor="@color/colorPrimaryDark"
+        app:miniCircleColor="@color/colorAccent"
+        app:normalStateColor="@color/colorPrimary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
